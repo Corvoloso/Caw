@@ -1,0 +1,29 @@
+{
+  "env": {
+    "es2020": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "react-native",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
