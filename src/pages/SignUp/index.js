@@ -34,25 +34,21 @@ const Register = ({ navigation }) => {
       password,
     };
 
-    try {
-      dispatch(CheckAuthenticated(userData));
-      dispatch(AddProfile(userData));
+    dispatch(CheckAuthenticated(userData));
+    dispatch(AddProfile(userData));
 
-      if (!userData) {
-        return Alert.alert(
-          'Oops',
-          'Não foi possível realizar seu cadastro, verifique se os campos foram preenchidos corretamente.',
-          [{ text: 'Ok' }],
-        );
-      }
-
-      navigation.reset({
-        index: 0,
-        routes: [{ name: 'Feed' }],
-      });
-    } catch (err) {
-      console.log(`ERROR - ${err}`);
+    if (!userData) {
+      return Alert.alert(
+        'Oops',
+        'Não foi possível realizar seu cadastro, verifique se os campos foram preenchidos corretamente.',
+        [{ text: 'Ok' }],
+      );
     }
+
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Feed' }],
+    });
   };
 
   return (
@@ -65,13 +61,13 @@ const Register = ({ navigation }) => {
           keyboardAppearance="dark"
           placeholder="Digite seu nome"
           value={username}
-          onChangeText={(text) => setUsername(text)}
+          onChangeText={text => setUsername(text)}
         />
         <Input
           keyboardAppearance="dark"
           placeholder="Digite seu email"
           value={email}
-          onChangeText={(text) => setEmail(text)}
+          onChangeText={text => setEmail(text)}
         />
         <Input
           keyboardAppearance="dark"
@@ -79,7 +75,7 @@ const Register = ({ navigation }) => {
           secureTextEntry={true}
           placeholder="Digite uma senha"
           value={password}
-          onChangeText={(text) => setPassword(text)}
+          onChangeText={text => setPassword(text)}
         />
 
         <Button onPress={handleRegister}>

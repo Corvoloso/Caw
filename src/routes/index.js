@@ -9,11 +9,10 @@ import SignUp from '../pages/SignUp';
 
 const Routes = () => {
   const Stack = createStackNavigator();
-  const authenticated = useSelector(state => state.auth.authenticated);
 
   return (
     <Stack.Navigator
-      initialRouteName={authenticated ? 'Feed' : 'SignIn'}
+      initialRouteName="SignIn"
       screenOptions={{
         headerTitle: '',
         headerTransparent: true,
