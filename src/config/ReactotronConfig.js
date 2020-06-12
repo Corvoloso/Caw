@@ -1,11 +1,16 @@
-import Reactotron from 'reactotron-react-native';
+if (__DEV__) {
+  const reactotronLoad = async () => {
+    const reactotron = await import('reactotron-react-native');
+    const reactotronRedux = await import('reactotron-react-native');
 
-import { reactotronRedux } from 'reactotron-redux';
+    import('reactotron-react-native');
 
-if (process.env.NODE_ENV === 'development') {
-  const tron = Reactotron.configure().use(reactotronRedux()).connect();
+    const tron = reactotron.configure().use(reactotronRedux()).connect();
 
-  tron.clear();
+    tron.clear();
 
-  console.tron = tron;
+    console.tron = tron;
+  };
+
+  reactotronLoad();
 }
