@@ -20,13 +20,13 @@ The project consist of a **front-end only** twitter feed, where you can share yo
 
 Technologies that I used to develop Caw
 
-- [React]('https://reactnative.dev/')
-- [React Native]('https://reactnative.dev/')
-- [React Navigation]('https://reactnavigation.org/')
-- [Redux]('https://redux.js.org/')
-- [React Redux]('https://react-redux.js.org/')
-- [Immer]('https://github.com/immerjs/immer')
-- [Styled Components]('https://styled-components.com/')
+- [React](https://reactnative.dev/)
+- [React Native](https://reactnative.dev/)
+- [React Navigation](https://reactnavigation.org/)
+- [Redux](https://redux.js.org/)
+- [React Redux](https://react-redux.js.org/)
+- [Immer](https://github.com/immerjs/immer)
+- [Styled Components](https://styled-components.com/)
 
 ## 🚀 Getting started
 
